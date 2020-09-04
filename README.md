@@ -8,10 +8,9 @@ greeting.sol is a smart contract that aims to present some features of the Solid
 2. Create a new file greeting.sol and paste into it the script contained in this repository;
 3. Compile greeting.sol;
 4. Deploy greeting.sol locally;
-5. Try to say Hello (sayHello()) to the smart contract. 
-6. Try to withdraw (withdrawFunds ()) the smart contract funds. It will not be possible since nobody signed the contract;
-7. Sign (writeSignature()) the contract at least 2 times using distinct addresses and by providing names;
-8. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
+5. Try to say Hello (sayHello()) to the smart contract.
+6. Try to set a greeting message (setGreeting()) to everyone else accessing your smart contract.
+7. Try to say Hello (sayHello()) to the smart contract with another account.
 
 Now try using the Ropsten public test network (team up with someone else)!
 
