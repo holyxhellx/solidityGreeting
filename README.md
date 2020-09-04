@@ -14,26 +14,18 @@ greeting.sol is a smart contract that aims to present some features of the Solid
 
 Now try using the Ropsten public test network (team up with someone else)!
 
-9. Install [Metamask](https://metamask.io/) and follow the wizard;
-10. Connect to the Ropsten network;
-11. Withdraw funds for free from the Ropsten faucet;
-12. As a Remix IDE environment select Injected Web3, so as to interact with Ropsten;
-13. (Only one of you) deploy Funds.sol;
-14. (The other person) invoke (at address) Funds.sol from the other instance of Remix IDE using the smart contract address;
-15. Deposit funds (for example, 1 Ether) into the smart contract by invoking the fallback function;
-16. Sign (writeSignature()) the contract at least 2 times using distinct addresses and by providing names;
-17. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
+8. Install [Metamask](https://metamask.io/) and follow the wizard;
+9. Connect to the Ropsten network;
+10. Withdraw funds for free from the Ropsten faucet;
+11. As a Remix IDE environment select Injected Web3, so as to interact with Ropsten;
+12. (Only one of you) deploy greeting.sol;
+13. (The other person) invoke (at address) greeting.sol from the other instance of Remix IDE using the smart contract address;
+14. Try to say Hello (sayHello()) to the smart contract.
+15. Try to set a greeting message (setGreeting()) to everyone else accessing your smart contract.
+16. Try to say Hello (sayHello()) to the smart contract with another account.
 
-Note that in this case the signatures and the names will be written **permanently** on the Ropsten public test network.
-Students may use also [Etherscan](https://ropsten.etherscan.io/) to interact with the the smart contract.
+## Exercise part (working on your own)
 
-## Optional part (working on your own)
+We have been asked by the marketing department to provide analytics and benchmarkings see how popular our new smart contact is.
+They want a way to count the number of times other people (not the owner) clicks on our function: sayHello()
 
-18. Modify the code to require sending a positive amount of Ether to the contract to sign it (replace line 24 of the code with the code below);
-
-```solidity
- function writeSignature(string memory _name) public payable isOwner(false, "An address can be used only once to sign the contract.") {
-  require(msg.value > 0, "A positive amount of Ether is required to sing the contract.");
-```
-
-19. Repeat the process from step 3, taking into consideration the new rule;
