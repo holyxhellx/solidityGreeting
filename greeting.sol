@@ -16,7 +16,7 @@ contract Greeter {
 
     function sayHello() public view returns(string) {
         if (isOwner()) {
-            return "Hey daddy!";
+            return "Hello, you are my owner";
         } else {
             return greeting;
         }
@@ -26,6 +26,7 @@ contract Greeter {
         greeting = _newGreeting;
     }
     
+    // Check if the caller is the owner of this smart contract
     function isOwner() view private returns(bool) {
         return msg.sender == owner;    
     }
